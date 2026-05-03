@@ -9,10 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Caveat:wght@500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
 
 <style>
-/* =========================
-   RESET
-========================= */
-
 *,
 *::before,
 *::after{
@@ -45,10 +41,6 @@ body{
   overflow-x:hidden;
 }
 
-/* =========================
-   REVEAL
-========================= */
-
 .r{
   opacity:0;
   transform:translateY(20px);
@@ -65,10 +57,6 @@ body{
 .d1{transition-delay:.12s;}
 .d2{transition-delay:.24s;}
 .d3{transition-delay:.36s;}
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
   min-height:100vh;
@@ -191,10 +179,6 @@ body{
 .hp-img{
   width:130px;
   aspect-ratio:3/4;
-  background:linear-gradient(160deg,#EAE0D0,#CBBBA5);
-  display:flex;
-  align-items:center;
-  justify-content:center;
   overflow:hidden;
   position:relative;
 }
@@ -217,28 +201,6 @@ body{
   transform:translateX(200%);
 }
 
-.sil{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:3px;
-  opacity:.32;
-}
-
-.sil-h{
-  width:32px;
-  height:32px;
-  border-radius:50%;
-  background:var(--sand);
-}
-
-.sil-b{
-  width:50px;
-  height:58px;
-  border-radius:25px 25px 0 0;
-  background:var(--sand);
-}
-
 @keyframes fup{
   from{
     opacity:0;
@@ -249,10 +211,6 @@ body{
     transform:none;
   }
 }
-
-/* =========================
-   ENVELOPE
-========================= */
 
 .envelope-section{
   background:var(--cream);
@@ -338,10 +296,6 @@ body{
   color:var(--muted);
 }
 
-/* =========================
-   INTRO
-========================= */
-
 .itinerary-intro{
   background:var(--white);
   padding:56px 36px 48px;
@@ -371,10 +325,6 @@ body{
   letter-spacing:.3px;
   color:var(--muted);
 }
-
-/* =========================
-   CHAPTER HEADER
-========================= */
 
 .ch-head{
   background:var(--white);
@@ -416,10 +366,6 @@ body{
   text-transform:uppercase;
   color:var(--muted);
 }
-
-/* =========================
-   TIMELINE
-========================= */
 
 .timeline{
   background:var(--cream);
@@ -465,16 +411,6 @@ body{
   background:var(--wine);
   border:3px solid var(--cream);
   box-shadow:0 0 0 1.5px var(--wine);
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-}
-
-.tl-item:hover .tl-dot{
-  transform:scale(1.35);
-  box-shadow:
-    0 0 0 2px var(--wine),
-    0 0 12px rgba(123,29,46,.25);
 }
 
 .tl-card{
@@ -484,31 +420,6 @@ body{
   position:relative;
   overflow:hidden;
   box-shadow:0 3px 18px rgba(30,18,10,.07);
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-}
-
-.tl-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 32px rgba(30,18,10,.12);
-}
-
-.tl-card::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:2.5px;
-  background:linear-gradient(to right,var(--wine),var(--gold));
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .4s ease;
-}
-
-.tl-card:hover::before{
-  transform:scaleX(1);
 }
 
 .tl-item.left .tl-card{
@@ -572,37 +483,11 @@ body{
   opacity:.78;
 }
 
-/* =========================
-   CLOSING
-========================= */
-
 .closing{
   background:var(--wine);
   padding:60px 20px 34px;
   position:relative;
   overflow:hidden;
-}
-
-.closing::before{
-  content:'';
-  position:absolute;
-  top:-70px;
-  left:-50px;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.07);
-}
-
-.closing::after{
-  content:'';
-  position:absolute;
-  bottom:-80px;
-  right:-60px;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.05);
 }
 
 .scatter{
@@ -615,22 +500,9 @@ body{
   background:rgba(255,255,255,.95);
   padding:7px 7px 30px;
   box-shadow:6px 10px 28px rgba(0,0,0,.35);
-  cursor:pointer;
-  transition:
-    transform .4s ease,
-    box-shadow .4s ease;
-}
-
-.sp:hover{
-  z-index:10;
-  box-shadow:12px 18px 44px rgba(0,0,0,.5);
 }
 
 .sp-img{
-  background:linear-gradient(160deg,#EDE3D3,#C8B8A2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
   overflow:hidden;
   position:relative;
 }
@@ -640,29 +512,6 @@ body{
   height:100%;
   object-fit:cover;
   display:block;
-filter:contrast(1.02) saturate(.96);
-}
-
-.sp-img::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    105deg,
-    transparent 40%,
-    rgba(255,255,255,.5) 50%,
-    transparent 60%
-  );
-  animation:shimmer 5s ease infinite;
-}
-
-@keyframes shimmer{
-  0%{
-    left:-100%;
-  }
-  60%,100%{
-    left:160%;
-  }
 }
 
 .sp1{
@@ -670,10 +519,6 @@ filter:contrast(1.02) saturate(.96);
   top:0;
   left:6px;
   transform:rotate(-3deg);
-}
-
-.sp1:hover{
-  transform:rotate(0) scale(1.06);
 }
 
 .sp1 .sp-img{
@@ -688,10 +533,6 @@ filter:contrast(1.02) saturate(.96);
   transform:rotate(2.5deg);
 }
 
-.sp2:hover{
-  transform:rotate(0) scale(1.06);
-}
-
 .sp2 .sp-img{
   width:128px;
   height:162px;
@@ -702,10 +543,6 @@ filter:contrast(1.02) saturate(.96);
   top:196px;
   left:50%;
   transform:translateX(-50%) rotate(-1deg);
-}
-
-.sp3:hover{
-  transform:translateX(-50%) rotate(0) scale(1.04);
 }
 
 .sp3 .sp-img{
@@ -720,10 +557,6 @@ filter:contrast(1.02) saturate(.96);
   transform:rotate(2deg);
 }
 
-.sp4:hover{
-  transform:rotate(0) scale(1.06);
-}
-
 .sp4 .sp-img{
   width:134px;
   height:164px;
@@ -736,40 +569,10 @@ filter:contrast(1.02) saturate(.96);
   transform:rotate(-2.5deg);
 }
 
-.sp5:hover{
-  transform:rotate(0) scale(1.06);
-}
-
 .sp5 .sp-img{
   width:132px;
   height:160px;
 }
-
-.adult-sil{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:4px;
-  opacity:.28;
-}
-
-.adult-sil-h{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:var(--sand);
-}
-
-.adult-sil-b{
-  width:62px;
-  height:76px;
-  border-radius:31px 31px 0 0;
-  background:var(--sand);
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 .footer-credit{
   margin-top:64px;
@@ -782,10 +585,6 @@ filter:contrast(1.02) saturate(.96);
   z-index:5;
   line-height:1.8;
 }
-
-/* =========================
-   MODAL
-========================= */
 
 .modal-overlay{
   display:none;
@@ -801,12 +600,6 @@ filter:contrast(1.02) saturate(.96);
 
 .modal-overlay.open{
   display:flex;
-  animation:fadeIn .3s ease;
-}
-
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
 }
 
 .modal-box{
@@ -818,21 +611,9 @@ filter:contrast(1.02) saturate(.96);
   position:relative;
   border-left:3px solid var(--wine);
   box-shadow:0 20px 60px rgba(0,0,0,.25);
-  animation:slideUp .4s cubic-bezier(.16,1,.3,1);
   display:flex;
   flex-direction:column;
   overflow:hidden;
-}
-
-@keyframes slideUp{
-  from{
-    opacity:0;
-    transform:translateY(24px);
-  }
-  to{
-    opacity:1;
-    transform:none;
-  }
 }
 
 .modal-close{
@@ -844,33 +625,14 @@ filter:contrast(1.02) saturate(.96);
   cursor:pointer;
   font-size:16px;
   color:var(--muted);
-  transition:color .2s ease;
   z-index:10;
-}
-
-.modal-close:hover{
-  color:var(--wine);
 }
 
 .modal-scroll{
   flex:1;
   overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
   padding:36px 28px;
   padding-top:54px;
-}
-
-.modal-scroll::-webkit-scrollbar{
-  width:4px;
-}
-
-.modal-scroll::-webkit-scrollbar-thumb{
-  background:rgba(123,29,46,.25);
-  border-radius:10px;
-}
-
-.letter-text{
-  padding-bottom:20px;
 }
 
 .letter-text p{
@@ -885,12 +647,7 @@ filter:contrast(1.02) saturate(.96);
   font-family:'Caveat',cursive!important;
   font-size:22px!important;
   color:var(--wine)!important;
-  margin-top:8px!important;
 }
-
-/* =========================
-   OPENING SCREEN
-========================= */
 
 .opening-screen{
   position:fixed;
@@ -944,23 +701,13 @@ filter:contrast(1.02) saturate(.96);
   text-transform:uppercase;
   cursor:pointer;
   border-radius:999px;
-  transition:
-    transform .3s ease,
-    opacity .3s ease;
 }
-
-.open-btn:hover{
-  transform:translateY(-2px);
-  opacity:.92;
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="opening-screen" id="openingScreen">
-
   <div class="opening-content">
 
     <p class="opening-small">A little surprise for you</p>
@@ -975,14 +722,12 @@ filter:contrast(1.02) saturate(.96);
     </button>
 
   </div>
-
 </div>
 
 <audio id="bgm" loop playsinline>
   <source src="./song/music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- HERO -->
 <section class="hero">
 
   <div class="hero-ghost">MNMS</div>
@@ -994,23 +739,22 @@ filter:contrast(1.02) saturate(.96);
 
   <div class="hero-photos">
 
-  <div class="hero-pol hp-left">
-    <div class="hp-img">
-      <img src="image/hero-1.jpg" alt="photo" class="real-img">
+    <div class="hero-pol hp-left">
+      <div class="hp-img">
+        <img src="image/hero-1.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-  <div class="hero-pol hp-right">
-    <div class="hp-img">
-      <img src="image/hero-2.jpg" alt="photo" class="real-img">
+    <div class="hero-pol hp-right">
+      <div class="hp-img">
+        <img src="image/hero-2.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
 
 </section>
 
-<!-- ENVELOPE -->
 <section class="envelope-section r">
 
   <div class="env-body" onclick="openEnv()">
@@ -1036,7 +780,6 @@ filter:contrast(1.02) saturate(.96);
 
 </section>
 
-<!-- INTRO -->
 <section class="itinerary-intro r">
 
   <p class="intro-eyebrow">A little something for us</p>
@@ -1047,12 +790,11 @@ filter:contrast(1.02) saturate(.96);
   </h3>
 
   <p class="intro-body">
-    Six days, six places each one picked just for you.
+    Five days, five places each one picked just for you.
   </p>
 
 </section>
 
-<!-- CHAPTER HEADER -->
 <section class="ch-head r">
 
   <div class="ch-head-inner">
@@ -1063,25 +805,26 @@ filter:contrast(1.02) saturate(.96);
     </h2>
 
     <div class="ch-head-right">
-      <div class="num">VI</div>
-      <div class="sub">Six Chapters</div>
+      <div class="num">V</div>
+      <div class="sub">Five Chapters</div>
     </div>
 
   </div>
 
 </section>
 
-<!-- TIMELINE -->
 <section class="timeline">
 
   <div class="spine"></div>
 
+  <!-- CHAPTER 1 -->
   <div class="tl-item left r">
     <div class="tl-node">
       <div class="tl-dot"></div>
     </div>
 
     <div class="tl-card">
+
       <div class="tl-top">
 
         <div class="tl-icon">
@@ -1108,48 +851,12 @@ filter:contrast(1.02) saturate(.96);
       <div class="tl-place">
         Parigi, Pondok Aren, South Tangerang
       </div>
+
     </div>
   </div>
 
+  <!-- CHAPTER 2 -->
   <div class="tl-item right r d1">
-
-    <div class="tl-node">
-      <div class="tl-dot"></div>
-    </div>
-
-    <div class="tl-card">
-
-      <div class="tl-top">
-
-        <div class="tl-icon">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <path
-              d="M3 7 Q3 17 11 15 Q19 17 19 7"
-              stroke="#7B1D2E"
-              stroke-width="1.4"
-              fill="none"
-            />
-          </svg>
-        </div>
-
-        <div>
-          <div class="tl-ch">Chapter II</div>
-          <div class="tl-date">19 May · Monday</div>
-        </div>
-
-      </div>
-
-      <div class="tl-title">Perpustakaan Nasional</div>
-
-      <div class="tl-place">
-        Jl. Medan Merdeka Selatan No.11, Gambir, Central Jakarta
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="tl-item left r d2">
 
     <div class="tl-node">
       <div class="tl-dot"></div>
@@ -1173,7 +880,7 @@ filter:contrast(1.02) saturate(.96);
         </div>
 
         <div>
-          <div class="tl-ch">Chapter III</div>
+          <div class="tl-ch">Chapter II</div>
           <div class="tl-date">23 May · Friday</div>
         </div>
 
@@ -1189,7 +896,8 @@ filter:contrast(1.02) saturate(.96);
 
   </div>
 
-  <div class="tl-item right r">
+  <!-- CHAPTER 3 -->
+  <div class="tl-item left r d2">
 
     <div class="tl-node">
       <div class="tl-dot"></div>
@@ -1211,7 +919,7 @@ filter:contrast(1.02) saturate(.96);
         </div>
 
         <div>
-          <div class="tl-ch">Chapter IV</div>
+          <div class="tl-ch">Chapter III</div>
           <div class="tl-date">25 May · Sunday</div>
         </div>
 
@@ -1227,7 +935,8 @@ filter:contrast(1.02) saturate(.96);
 
   </div>
 
-  <div class="tl-item left r d1">
+  <!-- CHAPTER 4 -->
+  <div class="tl-item right r">
 
     <div class="tl-node">
       <div class="tl-dot"></div>
@@ -1249,7 +958,7 @@ filter:contrast(1.02) saturate(.96);
         </div>
 
         <div>
-          <div class="tl-ch">Chapter V</div>
+          <div class="tl-ch">Chapter IV</div>
           <div class="tl-date">27 May · Tuesday</div>
         </div>
 
@@ -1265,7 +974,8 @@ filter:contrast(1.02) saturate(.96);
 
   </div>
 
-  <div class="tl-item right r d2">
+  <!-- CHAPTER 5 -->
+  <div class="tl-item left r d1">
 
     <div class="tl-node">
       <div class="tl-dot"></div>
@@ -1291,16 +1001,18 @@ filter:contrast(1.02) saturate(.96);
         </div>
 
         <div>
-          <div class="tl-ch">Chapter VI</div>
+          <div class="tl-ch">Chapter V</div>
           <div class="tl-date">31 May · Saturday</div>
         </div>
 
       </div>
 
-      <div class="tl-title">Museum MACAN</div>
+      <div class="tl-title">
+        Perpustakaan Nasional & Museum MACAN
+      </div>
 
       <div class="tl-place">
-        AKR Tower, Kebon Jeruk, West Jakarta
+        Central Jakarta & West Jakarta
       </div>
 
     </div>
@@ -1309,42 +1021,41 @@ filter:contrast(1.02) saturate(.96);
 
 </section>
 
-<!-- CLOSING -->
 <section class="closing">
 
   <div class="scatter r">
 
-  <div class="sp sp1">
-    <div class="sp-img">
-      <img src="image/close-1.jpg" alt="photo" class="real-img">
+    <div class="sp sp1">
+      <div class="sp-img">
+        <img src="image/close-1.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-  <div class="sp sp2">
-    <div class="sp-img">
-      <img src="image/close-2.jpg" alt="photo" class="real-img">
+    <div class="sp sp2">
+      <div class="sp-img">
+        <img src="image/close-2.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-  <div class="sp sp3">
-    <div class="sp-img">
-      <img src="image/close-3.jpg" alt="photo" class="real-img">
+    <div class="sp sp3">
+      <div class="sp-img">
+        <img src="image/close-3.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-  <div class="sp sp4">
-    <div class="sp-img">
-      <img src="image/close-4.jpg" alt="photo" class="real-img">
+    <div class="sp sp4">
+      <div class="sp-img">
+        <img src="image/close-4.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-  <div class="sp sp5">
-    <div class="sp-img">
-      <img src="image/close-5.jpg" alt="photo" class="real-img">
+    <div class="sp sp5">
+      <div class="sp-img">
+        <img src="image/close-5.jpg" alt="photo" class="real-img">
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
 
   <div class="footer-credit">
     @ 2026 Happy Jaeniuss&rsquo;s Day · Mochammad Akbar Rafael
@@ -1352,7 +1063,6 @@ filter:contrast(1.02) saturate(.96);
 
 </section>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
 
   <div class="modal-box" onclick="event.stopPropagation()">
@@ -1394,10 +1104,6 @@ filter:contrast(1.02) saturate(.96);
 </div>
 
 <script>
-/* =========================
-   REVEAL ANIMATION
-========================= */
-
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{
     if(entry.isIntersecting){
@@ -1411,10 +1117,6 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.r').forEach((el)=>{
   observer.observe(el);
 });
-
-/* =========================
-   ENVELOPE MODAL
-========================= */
 
 function openEnv(){
   document.getElementById('envFlap').classList.add('open');
@@ -1434,10 +1136,6 @@ function closeModal(){
   },300);
 }
 
-/* =========================
-   MUSIC AUTOPLAY FIX
-========================= */
-
 const bgm = document.getElementById('bgm');
 
 function enterSite(){
@@ -1449,7 +1147,6 @@ function enterSite(){
 
   document.body.style.overflow = 'auto';
 }
-
 </script>
 
 </body>
